@@ -1,0 +1,118 @@
+/* User custom styles */
+
+/* Reduce gap between pill groups */
+window#waybar.top #pill,
+window#waybar.bottom #pill {
+    margin: 0.1em 0.3em 0.1em 0.3em;
+}
+
+/* Reduce module padding */
+window#waybar.top .modules-left,
+window#waybar.top .modules-center,
+window#waybar.top .modules-right {
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    margin-left: 0.1em;
+    margin-right: 0.1em;
+}
+
+/* Network (WiFi) - high visibility */
+#network {
+    color: #f1f5f9;
+    opacity: 1;
+    font-size: 8px;
+    min-width: 1.5em;
+}
+
+#network.connected {
+    color: #f1f5f9;
+}
+
+#network.disconnected {
+    color: #f87171;
+}
+
+#network.disabled {
+    color: #64748b;
+}
+
+/* Bluetooth - high visibility */
+#bluetooth {
+    color: #f1f5f9;
+    opacity: 1;
+    font-size: 10px;
+    min-width: 1.5em;
+}
+
+#bluetooth.on {
+    color: #f1f5f9;
+}
+
+#bluetooth.connected {
+    color: #60a5fa;
+}
+
+#bluetooth.off,
+#bluetooth.disabled {
+    color: #64748b;
+}
+
+/* Custom Nerd Font icon modules */
+#custom-wifi,
+#custom-bluetooth,
+#custom-battery {
+    color: #e0e0e0;
+    opacity: 1;
+    font-size: 14px;
+}
+
+/* Hover states */
+#custom-wifi:hover,
+#custom-bluetooth:hover,
+#custom-battery:hover {
+    color: #ffffff;
+}
+
+/* WiFi states */
+#custom-wifi.wifi-off {
+    color: #64748b;
+}
+
+#custom-wifi.wifi-on {
+    color: #e0e0e0;
+}
+
+/* Bluetooth states */
+#custom-bluetooth.bt-off {
+    color: #64748b;
+}
+
+#custom-bluetooth.bt-on {
+    color: #e0e0e0;
+}
+
+#custom-bluetooth.bt-connected {
+    color: #60a5fa;
+}
+
+/* Battery states */
+#custom-battery.normal {
+    color: #e0e0e0;
+}
+
+#custom-battery.charging {
+    color: #a8e6cf;
+}
+
+#custom-battery.low {
+    color: #ff9f43;
+}
+
+#custom-battery.critical {
+    color: #f87171;
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0.3; }
+}

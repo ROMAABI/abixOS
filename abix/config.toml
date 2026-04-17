@@ -1,0 +1,4 @@
+# Configuration file for abix
+# Environment variables should be on top
+# Updated config.toml file can be found at $HOME/.local/share/abix/config.toml
+"$schema" = "https://raw.githubusercontent.com/abix-Project/abix/refs/heads/master/Configs/.local/share/abix/schema/config.toml.json"
