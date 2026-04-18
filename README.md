@@ -157,18 +157,20 @@ cat ~/.config/hypr/hyprland.conf
 
 ```
 abixOS/
-├── hypr/           # Hyprland configuration
-├── waybar/         # Waybar configuration
-├── rofi/           # Rofi themes
-├── kitty/          # Kitty terminal config
-├── fish/           # Fish shell config
-├── zsh/            # Zsh shell config
-├── abix/           # Abix (HyDE) core config
-├── abix-themes/    # Theme definitions
-├── scripts/        # Utility scripts
-├── install.sh      # Installation script
-├── .gitignore      # Git ignore rules
-└── README.md       # This file
+├── config/
+│   ├── hypr/           # Hyprland configuration
+│   ├── waybar/         # Waybar configuration
+│   ├── rofi/           # Rofi themes
+│   ├── hyde/           # HyDE system config
+│   └── abix/           # Abix custom layer
+│       ├── abix.conf
+│       ├── scripts/
+│       ├── themes/
+│       └── wallpapers/
+├── local/share/
+│   └── hypr/           # Shared Hyprland configs
+├── install.sh          # Installation script
+└── README.md           # This file
 ```
 
 ## Credits

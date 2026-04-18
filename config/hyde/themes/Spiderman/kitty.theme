@@ -1,0 +1,55 @@
+$HOME/.config/kitty/theme.conf|killall -SIGUSR1 kitty
+
+# Spiderman - Red + Black theme
+
+cursor                  #e11d48
+cursor_text_color       background
+
+visual_bell_color       #e11d48
+bell_border_color       #e11d48
+
+active_border_color     #e11d48
+inactive_border_color   #1e293b
+
+active_tab_foreground   #f1f5f9
+active_tab_background   #e11d48
+inactive_tab_foreground #94a3b8
+inactive_tab_background #0f172a
+
+foreground              #f1f5f9
+background              #020617
+selection_foreground    #020617
+selection_background    #e11d48
+url_color               #f43f5e
+
+# black
+color0   #020617
+color8   #1e293b
+
+# red
+color1   #e11d48
+color9   #f43f5e
+
+# green
+color2   #22c55e
+color10  #4ade80
+
+# yellow
+color3   #f59e0b
+color11  #fbbf24
+
+# blue
+color4   #3b82f6
+color12  #60a5fa
+
+# magenta
+color5   #a855f7
+color13  #c084fc
+
+# cyan
+color6   #06b6d4
+color14  #22d3ee
+
+# white
+color7   #e2e8f0
+color15  #f8fafc

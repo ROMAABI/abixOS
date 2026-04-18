@@ -70,6 +70,8 @@ fi
 echo -e "${GREEN}[3/6] Installing configs...${NC}"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_CONFIG="$SCRIPT_DIR/config"
+REPO_LOCAL="$SCRIPT_DIR/local"
 
 # Create directories
 mkdir -p "$TARGET_DIR/hypr"
@@ -79,6 +81,7 @@ mkdir -p "$TARGET_DIR/kitty"
 mkdir -p "$TARGET_DIR/fish"
 mkdir -p "$TARGET_DIR/zsh"
 mkdir -p "$TARGET_DIR/abix"
+mkdir -p "$HOME/.local/share/hypr"
 
 # Copy config files
 copy_config() {
@@ -91,32 +94,29 @@ copy_config() {
 }
 
 # Hyprland
-if [ -d "$SCRIPT_DIR/hypr" ]; then
-    copy_config "$SCRIPT_DIR/hypr" "$TARGET_DIR/hypr"
-    # Create themes symlink if themes exist
-    if [ -d "$SCRIPT_DIR/abix-themes" ]; then
-        mkdir -p "$TARGET_DIR/hypr/themes"
-        cp -r "$SCRIPT_DIR/abix-themes"/* "$TARGET_DIR/hypr/themes/"
-    fi
+if [ -d "$REPO_CONFIG/hypr" ]; then
+    copy_config "$REPO_CONFIG/hypr" "$TARGET_DIR/hypr"
 fi
 
 # Waybar
-[ -d "$SCRIPT_DIR/waybar" ] && copy_config "$SCRIPT_DIR/waybar" "$TARGET_DIR/waybar"
+[ -d "$REPO_CONFIG/waybar" ] && copy_config "$REPO_CONFIG/waybar" "$TARGET_DIR/waybar"
 
 # Rofi
-[ -d "$SCRIPT_DIR/rofi" ] && copy_config "$SCRIPT_DIR/rofi" "$TARGET_DIR/rofi"
+[ -d "$REPO_CONFIG/rofi" ] && copy_config "$REPO_CONFIG/rofi" "$TARGET_DIR/rofi"
 
 # Kitty
-[ -d "$SCRIPT_DIR/kitty" ] && copy_config "$SCRIPT_DIR/kitty" "$TARGET_DIR/kitty"
+[ -d "$REPO_CONFIG/kitty" ] && copy_config "$REPO_CONFIG/kitty" "$TARGET_DIR/kitty"
 
-# Fish
-[ -d "$SCRIPT_DIR/fish" ] && copy_config "$SCRIPT_DIR/fish" "$TARGET_DIR/fish"
+# HyDE
+[ -d "$REPO_CONFIG/hyde" ] && copy_config "$REPO_CONFIG/hyde" "$TARGET_DIR/hyde"
 
-# Zsh
-[ -d "$SCRIPT_DIR/zsh" ] && copy_config "$SCRIPT_DIR/zsh" "$TARGET_DIR/zsh"
+# Abix (custom layer)
+[ -d "$REPO_CONFIG/abix" ] && copy_config "$REPO_CONFIG/abix" "$TARGET_DIR/abix"
 
-# Abix (HyDE-like config)
-[ -d "$SCRIPT_DIR/abix" ] && copy_config "$SCRIPT_DIR/abix" "$TARGET_DIR/abix"
+# Hypr shared configs
+if [ -d "$REPO_LOCAL/hypr" ]; then
+    copy_config "$REPO_LOCAL/hypr" "$HOME/.local/share/hypr"
+fi
 
 # ============================================
 # Install scripts

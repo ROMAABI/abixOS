@@ -26,7 +26,7 @@ function ani
     end
 
     set anime_dir (string replace -a " " "_" $anime)
-    set base_path "/home/spix/Anime/$anime_dir"
+    set base_path "$HOME/Anime/$anime_dir"
     mkdir -p $base_path
 
     echo "===> Downloading $anime Episodes $range $dub_flag..."
