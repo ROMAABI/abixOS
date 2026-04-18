@@ -1,0 +1,40 @@
+# AbixOS Package List
+# Add packages you want to install
+# Lines starting with # are ignored
+
+# Core - Hyprland
+hyprland
+
+# Status bar
+waybar
+
+# App launcher
+rofi
+
+# Notifications
+swaync
+
+# Terminal
+kitty
+
+# Wallpaper
+swww
+hyprpaper
+
+# Utilities
+cliphist
+wl-clipboard
+grim
+slurp
+imv
+
+# Shell
+zsh
+fish
+starship
+
+# Extras
+fzf
+bat
+exa
+fastfetch

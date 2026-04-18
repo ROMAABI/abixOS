@@ -1,0 +1,22 @@
+# AbixOS Config Mapping
+# Format: target_path|source_path
+# Use $HOME for home directory
+# Use $ABIX_DIR for AbixOS config directory
+
+# Hyprland
+$HOME/.config/hypr|$ABIX_DIR/hypr
+
+# Waybar
+$HOME/.config/waybar|$ABIX_DIR/waybar
+
+# Rofi
+$HOME/.config/rofi|$ABIX_DIR/rofi
+
+# Kitty (if exists)
+$HOME/.config/kitty|$ABIX_DIR/kitty
+
+# Abix (custom layer)
+$HOME/.config/abix|$ABIX_DIR
+
+# Hypr shared configs
+$HOME/.local/share/hypr|$HOME/.config/abix/../local/share/hypr
