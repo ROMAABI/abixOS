@@ -141,7 +141,7 @@ echo -e "${GREEN}[5/6] Reloading services...${NC}"
 
 # Reload Hyprland
 if command -v hyprctl &> /dev/null; then
-    hyprctl keyword decoration:shadow:refresh 2>/dev/null || true
+        hyprctl reload
     echo -e "  ${GREEN}✓${NC} Hyprland config reloaded"
 fi
 
